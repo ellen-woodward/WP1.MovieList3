@@ -1,13 +1,13 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { MovieService } from '../movie.service';
-import {Movie} from '../movie.model';
+import { Movie } from '../movie.model';
 
 @Component({
   selector: 'app-list-movies',
   templateUrl: './list-movies.component.html',
   styleUrls: ['./list-movies.component.css']
 })
-export class ListMoviesComponent {
+export class ListMoviesComponent implements OnInit{
   movies=[] as any;
   private currentMovie!: Movie;
 
